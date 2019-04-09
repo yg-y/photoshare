@@ -1,4 +1,4 @@
-package com.photoshare.study.basicknowledge;
+package com.photoshare.study.clazz;
 
 /**
  * 类加载顺序及实例化
