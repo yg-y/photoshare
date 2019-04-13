@@ -1,2 +1,8 @@
 server:
   port: 8080
+spring:
+  boot:
+    admin:
+      url: http://localhost:8081
+      client:
+        name: photoshare
