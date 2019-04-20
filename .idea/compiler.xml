@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="photoshare" />
         <module name="photoshare-controller" />
+        <module name="photoshare-generator" />
+        <module name="photoshare-model" />
         <module name="photoshare-monitor" />
         <module name="photoshare-study" />
       </profile>
@@ -17,6 +18,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="photoshare" options="-parameters" />
       <module name="photoshare-controller" options="-parameters" />
+      <module name="photoshare-generator" options="-parameters" />
+      <module name="photoshare-model" options="-parameters" />
       <module name="photoshare-monitor" options="-parameters" />
       <module name="photoshare-study" options="-parameters" />
     </option>

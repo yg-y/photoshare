@@ -6,12 +6,15 @@
 
     <groupId>com.young</groupId>
     <artifactId>photoshare</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>photoshare-controller</module>
         <module>photoshare-study</module>
         <module>photoshare-monitor</module>
+        <module>photoshare-model</module>
+        <module>photoshare-generator</module>
     </modules>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
