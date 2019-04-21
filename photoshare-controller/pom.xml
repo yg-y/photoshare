@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.young</groupId>
+            <artifactId>photoshare-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!--&lt;!&ndash;JavaMelody 监控 访问地址栏添加 monitoring&ndash;&gt;-->
         <!--<dependency>-->
         <!--<groupId>net.bull.javamelody</groupId>-->

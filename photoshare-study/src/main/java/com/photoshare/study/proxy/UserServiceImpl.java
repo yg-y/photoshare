@@ -1,5 +1,7 @@
 package com.photoshare.study.proxy;
 
+import com.baomidou.mybatisplus.extension.api.R;
+
 /**
  * 动态代理学习
  * <p>
@@ -16,5 +18,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void logout(String username) {
         System.out.println(username + " 成功退出.");
+    }
+
+    @Override
+    public R getUserInfoList() {
+        return null;
     }
 }

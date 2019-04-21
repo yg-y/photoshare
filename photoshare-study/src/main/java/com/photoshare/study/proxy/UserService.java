@@ -1,5 +1,7 @@
 package com.photoshare.study.proxy;
 
+import com.baomidou.mybatisplus.extension.api.R;
+
 /**
  * 动态代理学习
  * <p>
@@ -19,4 +21,6 @@ public interface UserService {
      * 退出
      */
     void logout(String username);
+
+    R getUserInfoList();
 }
