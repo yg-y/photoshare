@@ -2,23 +2,20 @@ package com.young.photoshare.utils;
 
 import lombok.Data;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * 公共返回类
  */
 @Data
-public class R {
+public class R<T> {
 
     private String sate;
-    private Object object;
+    private T data;
     private static final String SUCCESS_STATE = "200";
     private static final String ERROR_STATE = "200";
 
-    public R(String sate, Object object) {
+    public R(String sate, T data) {
         this.setSate(sate);
-        this.setObject(object);
+        this.setData(data);
     }
 
     public static R success() {

@@ -1,14 +1,14 @@
 # 启动端口
 server:
-  port: 8080
+  port: 8081
 
 spring:
   #  springboot admin 应用监控 未配置完成
-  boot:
-    admin:
-      url: http://localhost:8081
-      client:
-        name: photoshare
+  #  boot:
+  #    admin:
+  #      url: http://localhost:8081
+  #      client:
+  #        name: photoshare
 
   #  数据库连接配置
   datasource:
@@ -29,3 +29,6 @@ spring:
     validationQuery: SELECT 1 FROM dual
     # 配置监控统计拦截的filters,去掉后，监控界面的sql无法统计
     filters: stat,wall,log4j
+
+mybatis-plus:
+  mapper-locations: classpath*:xml/*.xml

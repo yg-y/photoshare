@@ -10,10 +10,24 @@
 后台及接口程序
 ```
 
-- photoshare-ui
-> 使用element-ui前端组件,使用vue全家桶
+- photoshare-generator
+> mybatis plus 构建工具
 ```$xslt
-使用vue-cli构建的前端页面入口
+mybatis plus 3.0 构建工具，用于生成业务代码
+```
+
+
+- photoshare-model
+> photoshare 核心代码模块
+```$xslt
+各个业务层以及配置
+```
+
+
+- photoshare-monitor
+> SpringBoot Admin 监控服务端
+```$xslt
+应用监控主入口
 ```
 
 - photoshare-study
@@ -23,5 +37,11 @@ thread ： 线程
 reflect：反射
 proxy：动态代理
 clazz：类实例化加载顺序
+```
+
+- photoshare-ui
+> 使用element-ui前端组件,使用vue全家桶
+```$xslt
+使用vue-cli构建的前端页面入口
 ```
 

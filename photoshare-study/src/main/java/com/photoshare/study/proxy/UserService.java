@@ -22,5 +22,4 @@ public interface UserService {
      */
     void logout(String username);
 
-    R getUserInfoList();
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.young.photoshare.mapper.ArticleMapper">
+
+    <select id="getHomeList" resultType="com.young.photoshare.entity.Article">
+        select a.id , a.article_title as articleTitle, a.article_cover as articleCover,
+        a.article_time as articleTime, u.user_name as userName from article a left join user u on a.user_id = u.user_id;
+    </select>
+</mapper>

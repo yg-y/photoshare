@@ -73,7 +73,7 @@ public class CodeGenerator {
         // 如果模板引擎是 freemarker
         String templatePath = "/templates/mapper.xml.ftl";
         // 如果模板引擎是 velocity
-//         String templatePath = "/templates/mapper.xml.vm";
+//         String templatePath = "/templates/xml.xml.vm";
 
         // 自定义输出配置
         List<FileOutConfig> focList = new ArrayList<>();
@@ -82,7 +82,7 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                return projectPath + "/photoshare-generator/src/main/resources/mapper/" + pc.getModuleName()
+                return projectPath + "/photoshare-generator/src/main/resources/xml/" + pc.getModuleName()
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });

@@ -1,5 +1,6 @@
 package com.young.photoshare.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -13,43 +14,40 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author young
- * @since 2019-04-21
+ * @since 2019-04-23
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class User implements Serializable {
+public class Article implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户id
+     * 用户ID
      */
     private String userId;
 
     /**
-     * 用户名
+     * 文章标题
      */
-    private String userName;
+    private String articleTitle;
 
     /**
-     * 邮箱
+     * 文章内容
      */
-    private String userEmail;
+    private String articleContent;
 
     /**
-     * 手机
+     * 封面图
      */
-    private String userPhone;
+    private String articleCover;
 
     /**
-     * 性别【1.男2.女】
+     * 发布日期
      */
-    private Boolean userSex;
+    private LocalDateTime articleTime;
 
-    private String userAddress;
-
-    private String userAutograph;
     /**
      * 创建时间
      */
@@ -59,6 +57,12 @@ public class User implements Serializable {
      * 修改日期
      */
     private LocalDateTime updateTime;
+
+    /**
+     * 用户名称
+     */
+    @TableField(exist = false)
+    private String userName;
 
 
 }

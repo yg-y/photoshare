@@ -20,8 +20,4 @@ public class UserServiceImpl implements UserService {
         System.out.println(username + " 成功退出.");
     }
 
-    @Override
-    public R getUserInfoList() {
-        return null;
-    }
 }
