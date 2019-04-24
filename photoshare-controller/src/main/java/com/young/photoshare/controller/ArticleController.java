@@ -1,16 +1,16 @@
 package com.young.photoshare.controller;
 
 
+import com.young.photoshare.entity.Article;
 import com.young.photoshare.service.IArticleService;
 import com.young.photoshare.utils.R;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author young
@@ -26,6 +26,17 @@ public class ArticleController {
     @GetMapping("/list")
     public R getHomeList() {
         return iArticleServiceImpl.getHomeList();
+    }
+
+    /**
+     * 根据ID获取文章详情
+     *
+     * @param article
+     * @return
+     */
+    @PostMapping("/getArticleInfo")
+    public R getArticleInfo(@RequestBody Article article) {
+        return iArticleServiceImpl.getArticleInfo(article.getId());
     }
 
 }

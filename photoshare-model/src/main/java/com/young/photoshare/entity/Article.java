@@ -1,6 +1,7 @@
 package com.young.photoshare.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -17,8 +18,6 @@ import java.time.LocalDateTime;
  * @since 2019-04-23
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 public class Article implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -51,16 +50,19 @@ public class Article implements Serializable {
     /**
      * 发布日期
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime articleTime;
 
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
     /**
      * 修改日期
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
     /**

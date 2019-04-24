@@ -16,4 +16,6 @@ import java.util.List;
 public interface ArticleMapper extends BaseMapper<Article> {
 
     List<Article> getHomeList();
+
+    Article getArticleInfo(String articleId);
 }

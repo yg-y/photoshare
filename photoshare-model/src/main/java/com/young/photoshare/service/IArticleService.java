@@ -15,4 +15,6 @@ import com.young.photoshare.utils.R;
 public interface IArticleService extends IService<Article> {
 
     R getHomeList();
+
+    R getArticleInfo(String articleId);
 }

@@ -29,4 +29,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         List<Article> articles = articleMapper.getHomeList();
         return R.success(articles);
     }
+
+    @Override
+    public R getArticleInfo(String articleId) {
+        return R.success(articleMapper.getArticleInfo(articleId));
+    }
 }
