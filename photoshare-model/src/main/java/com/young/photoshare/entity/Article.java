@@ -33,6 +33,16 @@ public class Article implements Serializable {
     private String userId;
 
     /**
+     * 评论ID
+     */
+    private String commentId;
+
+    /**
+     * 标签ID
+     */
+    private String tagId;
+
+    /**
      * 文章标题
      */
     private String articleTitle;
