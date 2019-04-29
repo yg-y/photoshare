@@ -7,6 +7,7 @@ import com.young.photoshare.service.IArticleService;
 import com.young.photoshare.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ import java.util.List;
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements IArticleService {
 
     @Autowired
-    ArticleMapper articleMapper;
+    private ArticleMapper articleMapper;
 
     @Override
     public R getHomeList() {
@@ -32,6 +33,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     @Override
     public R getArticleInfo(String articleId) {
-        return R.success(articleMapper.getArticleInfo(articleId));
+        if (!StringUtils.isEmpty(articleId)) {
+            return R.success(articleMapper.getArticleInfo(articleId));
+        }
+        return R.success();
     }
 }

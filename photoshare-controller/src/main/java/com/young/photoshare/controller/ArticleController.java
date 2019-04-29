@@ -4,7 +4,7 @@ package com.young.photoshare.controller;
 import com.young.photoshare.entity.Article;
 import com.young.photoshare.service.IArticleService;
 import com.young.photoshare.utils.R;
-import org.apache.ibatis.annotations.Param;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,10 +18,11 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/photoshare/article")
+@Slf4j
 public class ArticleController {
 
     @Autowired
-    IArticleService iArticleServiceImpl;
+    private IArticleService iArticleServiceImpl;
 
     @GetMapping("/list")
     public R getHomeList() {
@@ -36,7 +37,14 @@ public class ArticleController {
      */
     @PostMapping("/getArticleInfo")
     public R getArticleInfo(@RequestBody Article article) {
-        return iArticleServiceImpl.getArticleInfo(article.getId());
+        R r;
+        try {
+            r = iArticleServiceImpl.getArticleInfo(article.getId());
+        } catch (Exception e) {
+            r = R.error("服务器异常，请稍后再试");
+            log.error("服务器异常: " + e.toString());
+        }
+        return r;
     }
 
 }
