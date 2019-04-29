@@ -3,7 +3,7 @@
 <mapper namespace="com.young.photoshare.mapper.ArticleMapper">
 
     <select id="getHomeList" resultType="com.young.photoshare.entity.Article">
-        select a.id , a.article_title as articleTitle, a.article_cover as articleCover,
+        select a.id , a.article_title as articleTitle, a.article_cover as articleCover,a.article_like as articleLike,
         a.article_time as articleTime, u.user_name as userName from article a left join user u on a.user_id = u.user_id;
     </select>
     <select id="getArticleInfo" resultType="com.young.photoshare.entity.Article">

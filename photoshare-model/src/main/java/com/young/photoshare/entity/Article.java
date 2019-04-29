@@ -53,6 +53,11 @@ public class Article implements Serializable {
     private String articleContent;
 
     /**
+     * 点赞数
+     */
+    private String articleLike;
+
+    /**
      * 封面图
      */
     private String articleCover;
@@ -80,6 +85,5 @@ public class Article implements Serializable {
      */
     @TableField(exist = false)
     private String userName;
-
 
 }
