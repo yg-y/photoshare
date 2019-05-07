@@ -17,6 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <docker.image.prefix>photoshare</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -24,7 +25,6 @@
             <groupId>com.young</groupId>
             <artifactId>photoshare-model</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
 
         <!--&lt;!&ndash;JavaMelody 监控 访问地址栏添加 monitoring&ndash;&gt;-->
@@ -46,8 +46,21 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.11</version>
+                <configuration>
+                    <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <pushImage>true</pushImage>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
             </plugin>
         </plugins>
     </build>
