@@ -1,6 +1,7 @@
 package com.photoshare.paypal.contorller;
 
-import com.paypal.api.payments.*;
+import com.paypal.api.payments.Links;
+import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
 import com.photoshare.paypal.config.PaypalPaymentIntent;
 import com.photoshare.paypal.config.PaypalPaymentMethod;
@@ -16,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
-import java.util.Set;
 
 /**
  * @Author:Young
