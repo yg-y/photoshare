@@ -45,3 +45,8 @@ clazz：类实例化加载顺序
 使用vue-cli构建的前端页面入口
 ```
 
+- photoshare-paypal
+> 整合PayPal第三方支付
+```$xslt
+整合PayPal第三方支付，有待完善，初步实现调用支付接口
+```

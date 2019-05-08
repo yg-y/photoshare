@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Insert title here</title>
+</head>
+<body>
+<!--<form method="post" th:action="@{/pay}">-->
+<button type="button" onclick="usePayment()"><img
+        src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/44_Grey_CheckOut_Pill_Button.png"
+/></button>
+
+<!--</form>-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function usePayment() {
+        axios.post('/pay')
+            .then(function (response) {
+                window.open(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        console.log("s")
+    }
+</script>
+</body>
+</html>

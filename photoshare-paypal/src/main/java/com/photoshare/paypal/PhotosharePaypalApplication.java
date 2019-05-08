@@ -1,0 +1,13 @@
+package com.photoshare.paypal;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PhotosharePaypalApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PhotosharePaypalApplication.class, args);
+    }
+
+}
