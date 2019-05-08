@@ -1,6 +1,11 @@
 package com.photoshare.paypal.service;
 
-import com.paypal.api.payments.*;
+import com.paypal.api.payments.Amount;
+import com.paypal.api.payments.Payer;
+import com.paypal.api.payments.Payment;
+import com.paypal.api.payments.PaymentExecution;
+import com.paypal.api.payments.RedirectUrls;
+import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 import com.photoshare.paypal.config.PaypalPaymentIntent;

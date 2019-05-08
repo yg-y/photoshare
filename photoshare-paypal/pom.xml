@@ -37,6 +37,13 @@
             <version>1.14.0</version>
         </dependency>
 
+        <!--braintree版本的paypal集成-->
+        <!--<dependency>-->
+            <!--<groupId>com.braintreepayments.gateway</groupId>-->
+            <!--<artifactId>braintree-java</artifactId>-->
+            <!--<version>2.94.0</version>-->
+        <!--</dependency>-->
+
     </dependencies>
 
     <build>
