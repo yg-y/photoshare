@@ -1,6 +1,6 @@
 package com.photoshare.study.leetcode;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * @Author:Young
@@ -28,6 +28,25 @@ public class ArrayStudy {
         }
         i = i + 1;
         System.err.println(i);
+    }
+
+    /**
+     * 返回只出现一次的数字
+     *
+     * 方法四（异或法）：
+     *
+     * 思路：根据异或运算的特点，相同的数字经过异或运算后结果为0，
+     * 除单独出现一次的数字外，其他数字都是出现两次的，那么这些数字经过异或运算后结果一定是0。
+     * 而任何数字与0进行异或运算都是该数字本身。所以对数组所有元素进行异或运算，运算结果就是题目的答案。
+     */
+    @Test
+    public void singleNumber() {
+        int[] nums = {1, 2, 1, 2, 3, 4, 3, 4, 5, 6, 6};
+        int target = 0;
+        for (int i = 0, j = nums.length; i < j; i++) {
+            target = target ^ nums[i];
+        }
+        System.err.println(target);
     }
 
 
