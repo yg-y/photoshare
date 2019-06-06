@@ -37,6 +37,7 @@ thread ： 线程
 reflect：反射
 proxy：动态代理
 clazz：类实例化加载顺序
+leetcode：领扣刷题
 ```
 
 - photoshare-ui
@@ -48,5 +49,5 @@ clazz：类实例化加载顺序
 - photoshare-paypal
 > 整合PayPal第三方支付
 ```$xslt
-整合PayPal第三方支付，有待完善，初步实现调用支付接口
+整合PayPal第三方支付
 ```
