@@ -7,7 +7,7 @@ import org.junit.Test;
  * @Description LeetCode 数组
  * @Date: 2019/6/6 0006 9:34
  */
-public class ArrayStudy {
+public class ArrayStudyTest {
 
     /**
      * 从排序数组中删除重复项
@@ -32,9 +32,9 @@ public class ArrayStudy {
 
     /**
      * 返回只出现一次的数字
-     *
+     * <p>
      * 方法四（异或法）：
-     *
+     * <p>
      * 思路：根据异或运算的特点，相同的数字经过异或运算后结果为0，
      * 除单独出现一次的数字外，其他数字都是出现两次的，那么这些数字经过异或运算后结果一定是0。
      * 而任何数字与0进行异或运算都是该数字本身。所以对数组所有元素进行异或运算，运算结果就是题目的答案。
@@ -52,5 +52,27 @@ public class ArrayStudy {
 
     public static void main(String[] args) {
         System.err.println("aaa");
+    }
+
+
+    /**
+     * 给定一个整数数组 nums 和一个目标值 target，
+     * 请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+     * <p>
+     * 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+     */
+    @Test
+    public void twoSum() {
+        int[] nums = {11, 11, 22, 22, 33, 33, 44, 55, 88, 88, 122};
+        int target = 100;
+        String index = null;
+        int handle = 0;
+        for (int i = 0, j = nums.length; i < j; i++) {
+            if (target == nums[i] + nums[i + 1]) {
+                index = nums[i] + "," + nums[i + 1];
+                break;
+            }
+        }
+        System.err.println(index);
     }
 }
