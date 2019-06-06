@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.photoshare</groupId>
-    <artifactId>paypal</artifactId>
+    <artifactId>photoshare-paypal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>photoshare-paypal</name>
     <description>Demo project for Spring Boot</description>
