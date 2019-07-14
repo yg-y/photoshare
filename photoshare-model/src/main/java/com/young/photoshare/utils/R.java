@@ -8,19 +8,19 @@ import lombok.Data;
 @Data
 public class R<T> {
 
-    private Integer sate;
+    private Integer code;
     private String msg;
     private T data;
-    private static final Integer SUCCESS_STATE = 200;
-    private static final Integer ERROR_STATE = 500;
+    private static final Integer SUCCESS_STATE = 20000;
+    private static final Integer ERROR_STATE = 50000;
 
-    public R(Integer sate, T data) {
-        this.setSate(sate);
+    public R(Integer code, T data) {
+        this.setCode(code);
         this.setData(data);
     }
 
     public R(String msg) {
-        this.setSate(ERROR_STATE);
+        this.setCode(ERROR_STATE);
         this.setMsg(msg);
     }
 
@@ -32,12 +32,12 @@ public class R<T> {
         return new R(SUCCESS_STATE, object);
     }
 
-    public static R success(Integer state, Object object) {
-        return new R(state, object);
+    public static R success(Integer code, Object object) {
+        return new R(code, object);
     }
 
-    public static R error(Integer state, Object object) {
-        return new R(state, object);
+    public static R error(Integer code, Object object) {
+        return new R(code, object);
     }
 
     public static R error(Object object) {
