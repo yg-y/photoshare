@@ -1,6 +1,6 @@
 # 启动端口
 server:
-  port: 8444
+  port: 8555
 
 spring:
   #  springboot admin 应用监控 未配置完成
