@@ -1,7 +1,7 @@
 #请设置一个端口号
 port=8555
 
-containerName=photoshare-web:${port}
+containerName=photoshare-web-${port}
 #跟pom设置的镜像名称一样
 imageName=photoshare-web/photoshare-controller
 
