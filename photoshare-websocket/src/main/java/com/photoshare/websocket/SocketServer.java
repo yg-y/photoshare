@@ -6,11 +6,12 @@ import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
+import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-@ServerEndpoint(value = "/websocket")
+@ServerEndpoint(value = "/websocket/{id}")
 @Component
 public class SocketServer {
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
@@ -22,15 +23,19 @@ public class SocketServer {
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
 
+    //接收sid
+    private String sid = "";
+
     /**
      * 连接建立成功调用的方法
      */
     @OnOpen
-    public void onOpen(Session session) {
+    public void onOpen(Session session, @PathParam("id") String sid) {
         this.session = session;
         webSocketSet.add(this);     //加入set中
         addOnlineCount();           //在线数加1
-        System.out.println("有新连接加入！当前在线人数为" + getOnlineCount());
+        this.sid = sid;
+        System.err.println("有新窗口开始监听:" + sid + ",当前在线人数为" + getOnlineCount());
         try {
             sendMessage("test send message");
         } catch (IOException e) {
@@ -87,10 +92,16 @@ public class SocketServer {
     /**
      * 群发自定义消息
      */
-    public static void sendInfo(String message) throws IOException {
+    public static void sendInfo(String message, @PathParam("id") String sid) throws IOException {
+        System.err.println("推送消息到窗口" + sid + "，推送内容:" + message);
         for (SocketServer item : webSocketSet) {
             try {
-                item.sendMessage(message);
+                //这里可以设定只推送给这个sid的，为null则全部推送
+                if (sid == null) {
+                    item.sendMessage(message + ",群发");
+                } else if (item.sid.equals(sid)) {
+                    item.sendMessage(message);
+                }
             } catch (IOException e) {
                 continue;
             }
