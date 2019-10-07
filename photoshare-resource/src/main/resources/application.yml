@@ -1,6 +1,5 @@
 server:
-  port: 2121
-
+  port: 2323
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -30,8 +29,8 @@ spring:
     host: 120.79.30.86
     port: 6379
     password: 123456
-  # ä¸Šä¼ æ–‡ä»¶æ€»çš„æœ€å¤§å€¼
-  # å•ä¸ªæ–‡ä»¶çš„æœ€å¤§å€¼
+  # ÉÏ´«ÎÄ¼ş×ÜµÄ×î´óÖµ
+  # µ¥¸öÎÄ¼şµÄ×î´óÖµ
   servlet:
     multipart:
       max-file-size: 1000MB
@@ -39,9 +38,6 @@ spring:
 security:
   oauth2:
     resource:
-      filter-order: 3
-logging:
-  level:
-    org:
-      springframework:
-        web: info
+      id: resource
+      user-info-uri: http://127.0.0.1:2121/user
+      prefer-token-info: false

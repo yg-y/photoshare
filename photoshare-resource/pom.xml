@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.8.RELEASE</version>
+        <version>2.1.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.photoshare</groupId>
-    <artifactId>photoshare-security</artifactId>
+    <artifactId>photoshare-resource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>photoshare-security</name>
+    <name>photoshare-resource</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-            <version>2.1.4.RELEASE</version>
+            <version>2.1.8.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>redis.clients</groupId>
@@ -83,7 +83,6 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
