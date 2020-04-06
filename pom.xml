@@ -16,6 +16,9 @@
         <module>photoshare-model</module>
         <module>photoshare-generator</module>
         <module>photoshare-paypal</module>
+        <module>photoshare-resource</module>
+        <module>photoshare-security</module>
+        <module>photoshare-websocket</module>
     </modules>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
