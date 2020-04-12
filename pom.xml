@@ -43,7 +43,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+<!--            <optional>true</optional>-->
         </dependency>
 
         <!--mybatis plus 依赖-->
