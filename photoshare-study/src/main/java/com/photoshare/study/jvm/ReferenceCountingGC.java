@@ -17,6 +17,7 @@ public class ReferenceCountingGC {
         obj1 = null;
         obj2 = null;
 
+        //HotSpot 没有因为对象的互相引用而导致对象不GC 所以HotSpot JVM 不是单纯通过计数器来判断对象是否GC
         System.gc();
 
     }
