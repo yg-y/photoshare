@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.util.Random;
 
 
+/**
+ * 给出两个随机数算结果判断正确且可导出结果窗体程序
+ */
 public class Swing extends JFrame implements Runnable {
     private static final long serialVersionUID = 1618163380623777731L;
 

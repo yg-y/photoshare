@@ -4,9 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
 
+/**
+ * 时钟窗体程序
+ */
 public class TimeTest {
 
-    public static final Integer HOUR_TIME = 24;
+    public static final Integer HOUR_TIME = 23;
     public static final Integer MINUTES_TIME = 59;
     public static final Integer SECONDS_TIME = 59;
 
