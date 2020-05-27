@@ -179,7 +179,13 @@ public class Swing extends JFrame implements Runnable {
                 jButton.setVisible(false);
                 jButtonNext.setVisible(false);
                 System.err.println(resultExport.getText());
-                saveExportFile(resultExport.getText(), filePath + "/file", "statistical.txt");
+                StringBuffer stringBuffer = new StringBuffer(resultExport.getText());
+                String[] split1 = stringBuffer.toString().split("答对了，真棒。");
+                String[] split2 = stringBuffer.toString().split("请在答一次。");
+
+                stringBuffer.append("\n答对次数：" + (split1.length - 1));
+                stringBuffer.append("\n答错次数：" + (split2.length - 1));
+                saveExportFile(String.valueOf(stringBuffer), filePath + "/file", "statistical.txt");
             }
         });
     }
