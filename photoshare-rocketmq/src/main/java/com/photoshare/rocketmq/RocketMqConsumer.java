@@ -20,6 +20,7 @@ public class RocketMqConsumer {
         System.err.println("-------------结束消费消息--------------");
     }
 
+
     /**
      * 监听方式 监听到有消息就消费
      *

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  mobikok-nginx:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - /home/workspace/mobikok-op/docker/mobikok.conf:/etc/nginx/nginx.conf
+      - /usr/local/nginx/cert/mobikok.key:/usr/local/nginx/cert/mobikok.key
+      - /usr/local/nginx/cert/mobikok.cert:/usr/local/nginx/cert/mobikok.cert
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - mobikok
+
+networks:
+  mobikok:
+    driver: bridge
