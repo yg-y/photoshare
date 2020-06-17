@@ -4,6 +4,13 @@
 ```
 ## 模块说明
 
+- docker
+> docker-compose
+```$xslt
+docker-compose yml 文件，积累平时中间件的部署方式
+```
+
+
 - photoshare-controller
 > SpringBoot、Redis、MyBatis Plus、MySQL
 ```$xslt
@@ -50,4 +57,18 @@ leetcode：领扣刷题
 > 整合PayPal第三方支付
 ```$xslt
 整合PayPal第三方支付
+```
+
+- photoshare-rocketmq
+> 整合 Rocket MQ 例子 
+```$xslt
+整合 Rocket MQ 例子
+发布订阅模式
+```
+
+- photoshare-rabbitmq
+> 整合 Rabbit MQ 例子 
+```$xslt
+整合 Rabbit MQ 例子
+发布订阅模式
 ```
