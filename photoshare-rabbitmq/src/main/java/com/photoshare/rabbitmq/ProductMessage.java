@@ -15,15 +15,15 @@ import java.util.concurrent.TimeoutException;
  */
 public class ProductMessage {
 
-    private final static String QUEUE_NAME = "hello";
+    private final static String QUEUE_NAME = "OFFER_DOWN_LOG";
 
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("127.0.0.1");
+        factory.setHost("opx.mobikok.com");
         factory.setPort(5672);
-        factory.setUsername("admin");
-        factory.setPassword("123456");
+        factory.setUsername("mobikok");
+        factory.setPassword("mobikok@2020");
 
         Connection connection = null;
         Channel channel = null;
@@ -33,11 +33,20 @@ public class ProductMessage {
 
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
-        String message = "Hello World";
 
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        int
+                i = 0;
+        do {
+            StringBuilder message = new StringBuilder("Hello World");
+            i++;
+            message.append(i);
 
-        System.err.println("message send success : " + message);
+            channel.basicPublish("", QUEUE_NAME, null, message.toString().getBytes());
+            System.err.println("message send success : " + message);
+        } while (i < 10000000);
+
+        System.err.println("send message over");
+
 
     }
 }

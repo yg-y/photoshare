@@ -49,17 +49,17 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/photoshare-blog?useUnicode=true&characterEncoding=UTF-8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=UTF-8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setPassword("mobikok@2020");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.young");
+        pc.setParent("com.single.login");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
