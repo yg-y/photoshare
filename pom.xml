@@ -21,6 +21,7 @@
         <module>photoshare-websocket</module>
         <module>photoshare-rocketmq</module>
         <module>photoshare-rabbitmq</module>
+        <module>photoshare-annotation</module>
     </modules>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
