@@ -5,7 +5,6 @@ import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.software.os.OSFileStore;
 
-import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
@@ -16,7 +15,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -146,10 +144,7 @@ public class SystemMonitor {
 
     /**
      * 获取磁盘信息
-     *
-     * @return Map
      */
-
     public void getDiskInfo(SystemInfo systemInfo) {
         double unit = 1024 * 1024 * 1024;
 
