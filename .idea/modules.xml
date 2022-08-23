@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/photoshare-dynamicsource/photoshare-dynamicsource.iml" filepath="$PROJECT_DIR$/photoshare-dynamicsource/photoshare-dynamicsource.iml" />
       <module fileurl="file://$PROJECT_DIR$/photoshare-ui/photoshare-ui.iml" filepath="$PROJECT_DIR$/photoshare-ui/photoshare-ui.iml" />
     </modules>
   </component>

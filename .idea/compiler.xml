@@ -2,26 +2,47 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="photoshare-controller" />
-        <module name="photoshare-generator" />
-        <module name="photoshare-model" />
+        <module name="system-info-util" />
+        <module name="photoshare-security" />
         <module name="photoshare-monitor" />
+        <module name="photoshare-rocketmq" />
+        <module name="photoshare-resource" />
+        <module name="system" />
+        <module name="photoshare-paypal" />
+        <module name="photoshare-rabbitmq" />
+        <module name="photoshare-model" />
+        <module name="photoshare-dynamic" />
+        <module name="photoshare-websocket" />
+        <module name="photoshare-generator" />
         <module name="photoshare-study" />
+        <module name="photoshare-controller" />
+        <module name="photoshare-annotation" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="photoshare" options="-parameters" />
+      <module name="photoshare" options="" />
+      <module name="photoshare-annotation" options="-parameters" />
       <module name="photoshare-controller" options="-parameters" />
+      <module name="photoshare-dynamic" options="-parameters" />
       <module name="photoshare-generator" options="-parameters" />
       <module name="photoshare-model" options="-parameters" />
       <module name="photoshare-monitor" options="-parameters" />
+      <module name="photoshare-paypal" options="-parameters" />
+      <module name="photoshare-rabbitmq" options="-parameters" />
+      <module name="photoshare-resource" options="-parameters" />
+      <module name="photoshare-rocketmq" options="-parameters" />
+      <module name="photoshare-security" options="-parameters" />
       <module name="photoshare-study" options="-parameters" />
+      <module name="photoshare-websocket" options="-parameters" />
+      <module name="system" options="-parameters" />
+      <module name="system-info-util" options="-parameters" />
     </option>
   </component>
 </project>
