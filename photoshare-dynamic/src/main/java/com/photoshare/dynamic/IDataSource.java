@@ -41,6 +41,6 @@ public class IDataSource {
     }
 
     public void pop() {
-        dynamicRoutingDataSource.determineCurrentLookupKey();
+        DataSourceContextHolder.removeDataSource();
     }
 }
