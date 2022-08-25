@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/phtoshare-monitor/pom.xml" />
         <option value="$PROJECT_DIR$/system-info-util/pom.xml" />
         <option value="$PROJECT_DIR$/photoshare-dynamic/pom.xml" />
+        <option value="$PROJECT_DIR$/photoshare-es/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,6 +11,7 @@
         <module name="photoshare-security" />
         <module name="photoshare-monitor" />
         <module name="photoshare-rocketmq" />
+        <module name="photoshare-es" />
         <module name="photoshare-resource" />
         <module name="system" />
         <module name="photoshare-paypal" />
@@ -24,6 +25,10 @@
         <module name="photoshare-annotation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="photoshare-rocketmq" target="1.8" />
+      <module name="photoshare-websocket" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -31,6 +36,7 @@
       <module name="photoshare-annotation" options="-parameters" />
       <module name="photoshare-controller" options="-parameters" />
       <module name="photoshare-dynamic" options="-parameters" />
+      <module name="photoshare-es" options="-parameters" />
       <module name="photoshare-generator" options="-parameters" />
       <module name="photoshare-model" options="-parameters" />
       <module name="photoshare-monitor" options="-parameters" />

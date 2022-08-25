@@ -18,8 +18,8 @@
         <module>photoshare-paypal</module>
         <module>photoshare-resource</module>
         <module>photoshare-security</module>
-        <module>photoshare-websocket</module>
-        <module>photoshare-rocketmq</module>
+<!--        <module>photoshare-websocket</module>-->
+<!--        <module>photoshare-rocketmq</module>-->
         <module>photoshare-rabbitmq</module>
         <module>photoshare-annotation</module>
     </modules>
