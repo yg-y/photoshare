@@ -18,6 +18,12 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author young
+ * @version 1.0
+ * @date 2022/8/26 09:15
+ * @description
+ */
 @SpringBootApplication
 public class PhotoshareEsApplication {
 
@@ -26,7 +32,7 @@ public class PhotoshareEsApplication {
     }
 
     @Bean
-    public void init() throws IOException {
+    public ElasticsearchClient init() throws IOException {
 
 
         List<String> hostList = Arrays.stream("xxx.xxx.xxx:xxx,xxx.xxx.xxx:xxx".split(",")).toList();
@@ -39,23 +45,12 @@ public class PhotoshareEsApplication {
         RestClient restClient = RestClient.builder(
                 arrHost).build();
 
-// Create the transport with a Jackson mapper
+        // Create the transport with a Jackson mapper
         ElasticsearchTransport transport = new RestClientTransport(
                 restClient, new JacksonJsonpMapper());
 
-// And create the API client
-        ElasticsearchClient client = new ElasticsearchClient(transport);
-        SearchResponse<String> search = client.search(s -> s
-                        .index("newoms-pro-package-info")
-                        .query(q -> q
-                                .term(t -> t
-                                        .field("yksOrderId")
-                                        .value(v -> v.stringValue("WH2009020915007105"))
-                                )),
-                String.class);
+        // And create the API client
 
-        for (Hit<String> hit : search.hits().hits()) {
-            System.err.println(hit.source());
-        }
+        return new ElasticsearchClient(transport);
     }
 }

@@ -25,10 +25,6 @@
         <module name="photoshare-annotation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="photoshare-rocketmq" target="1.8" />
-      <module name="photoshare-websocket" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
