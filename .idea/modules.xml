@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/photoshare-dynamicsource/photoshare-dynamicsource.iml" filepath="$PROJECT_DIR$/photoshare-dynamicsource/photoshare-dynamicsource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoshare-knife4j.main.iml" filepath="$PROJECT_DIR$/.idea/modules/photoshare-knife4j.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/photoshare-rocketmq/photoshare-rocketmq.iml" filepath="$PROJECT_DIR$/photoshare-rocketmq/photoshare-rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/photoshare-ui/photoshare-ui.iml" filepath="$PROJECT_DIR$/photoshare-ui/photoshare-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/photoshare-websocket/photoshare-websocket.iml" filepath="$PROJECT_DIR$/photoshare-websocket/photoshare-websocket.iml" />
     </modules>
   </component>
 </project>

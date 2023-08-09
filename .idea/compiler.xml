@@ -24,6 +24,13 @@
         <module name="photoshare-controller" />
         <module name="photoshare-annotation" />
       </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
+        </processorPath>
+        <module name="photoshare-knife4j.main" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -42,7 +49,7 @@
       <module name="photoshare-rocketmq" options="-parameters" />
       <module name="photoshare-security" options="-parameters" />
       <module name="photoshare-study" options="-parameters" />
-      <module name="photoshare-websocket" options="-parameters" />
+      <module name="photoshare-websocket" options="" />
       <module name="system" options="-parameters" />
       <module name="system-info-util" options="-parameters" />
     </option>

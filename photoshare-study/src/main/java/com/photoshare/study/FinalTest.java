@@ -3,30 +3,31 @@ package com.photoshare.study;
 import okhttp3.*;
 
 import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * final修饰在方法参数上，该参数值不能改变，否则编译报错
  */
 public class FinalTest extends absTest {
     public static void main(String[] args) throws IOException {
-        FinalTest finalTest = new FinalTest();
-        System.err.println(finalTest.getInfo("zhangsan"));
-        String name = "lisi";
-        System.err.println(finalTest.getInfo(name));
+        int a = 1;
+        int b = 0;
 
-        OkHttpClient client = new OkHttpClient().newBuilder().build();
-        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
-        RequestBody body = RequestBody.create(mediaType, "order_number=205-8763783-5645942");
-        Request request = new Request.Builder()
-                .url("https://yks.lingxing.com/sc/routing/order/Order/getOrderDetail")
-                .method("POST", body)
-                .addHeader("Content-Type", "application/x-www-form-urlencoded")
-                .addHeader("Authorization", "bearer 3b5bgc9zl0bMHoS5+XI7Fsi/2T+2q1L5y/g3L6ZgfIJEx7exLA18FlnYIHtnAKUNyRwKZGAdlbFpH3kgNoL8OII+02GH/aCWVfwD1J8sMyg")
-                .build();
+        System.err.println(a << 2);
 
-        Response response = client.newCall(request).execute();
+        Map map = new HashMap<String, String>();
+        map.put("", "");
+        List<String> aa = new ArrayList<>();
+        aa.add("");
+        Map<String, String> map1 = new ConcurrentHashMap<>();
+        map1.put("", "");
+        map1.get("");
+        LinkedList<Object> linkedList = new LinkedList<>();
+        linkedList.add("");
+        linkedList.get(1);
+        linkedList.add(1, "");
 
-        System.err.println(response.body().string());
     }
 
     String getInfo(final String name) {

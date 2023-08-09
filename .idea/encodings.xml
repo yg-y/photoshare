@@ -3,26 +3,39 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-annotation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-controller" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-controller/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-dynamic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-dynamic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-es/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-es/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-model" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-model/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-monitor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-monitor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-paypal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-paypal/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-rabbitmq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-resource/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-rocketmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-security/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-study" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-study/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photoshare-study/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/photoshare-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/system-info-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-info-util/src/main/resources" charset="UTF-8" />
   </component>
 </project>
